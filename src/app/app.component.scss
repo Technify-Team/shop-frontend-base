@@ -1,0 +1,28 @@
+.cont {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 380px;
+
+
+}
+
+.banners{
+    width: 1140px;
+
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+
+    div{
+        width: 371px;
+        height: 380px;
+        background-color: #FFBFA3;
+    }
+
+}
+
+.footer {
+    height: 50px;
+    background-color: green;
+}

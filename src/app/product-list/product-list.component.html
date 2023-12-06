@@ -1,0 +1,38 @@
+
+<div class="sort">
+    <p>{{itemsCount}} товарів</p>
+    <!-- <button (click)="sortFromLow()">Price: from Low to High</button> -->
+    <div class="card flex justify-content-center">
+        <p-dropdown [options]="sorting"  (onChange)="handleSortEvent($event)" optionLabel="name" optionLabel="name" placeholder="Сортувати за..."></p-dropdown>
+    </div>
+</div>
+
+<div class="products">
+    <p-progressSpinner *ngIf="isLoading;else content" strokeWidth="8" fill="var(--surface-ground)" animationDuration="1s"></p-progressSpinner>
+    <ng-template #content>
+        <app-product
+        *ngFor="let product of products" [product]="product">
+
+    </app-product>
+    </ng-template>
+    
+</div>
+<div class="footer"></div>
+
+<!-- <app-pagination 
+    [currentPage]="currentPage"
+    [limit]="pageSize"
+    [total]="productList.length"
+    (changePage)="changePage($event)"
+>
+
+</app-pagination> -->
+
+<!-- <mat-paginator
+    [length]="itemsCount"
+    [showFirstLastButtons]="true"
+    [pageSize]="pageSize"
+    [pageIndex]="currentPage"
+    (page)="handlePageEvent($event)"
+> 
+</mat-paginator> -->

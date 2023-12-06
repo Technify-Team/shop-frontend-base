@@ -1,0 +1,26 @@
+:host {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    width: 1270px;
+    height: fit-content;
+    padding-top: 30px;
+    gap: 14px;
+
+}
+
+.footer {
+    height: 50px;
+    width: 50px;
+    background-color: green;
+}

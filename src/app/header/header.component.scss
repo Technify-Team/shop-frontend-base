@@ -1,0 +1,157 @@
+:host {
+    display: block;
+    width: 100%;
+    // justify-content: center;
+
+}
+
+
+.container {
+    width: 1270px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .img-small {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .img-medium {
+        width: 32px;
+    }
+}
+
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: solid 1px #DEE2E6;
+    
+    width: 100%;
+    
+    .group {
+        display: flex;
+        gap: 23px;
+
+        .secret{
+            color:#e3302300;
+        }
+        
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+    
+            p {
+                text-transform: uppercase;
+                font-size: 8px;
+                line-height: 8px;
+                margin: 0px;
+            }
+    
+        }
+    }
+
+    &.info { 
+        height: 45px;
+    }
+
+    &.main {
+        height: 80px;
+
+        .logo {
+            img {
+                width: 34px;
+                height: 40px;
+            }
+        }
+
+        .group {
+            gap: 32px;
+
+            .order {
+                position: relative;
+                
+                .circle {
+                    background-color: #E33123;
+                    border-radius: 50px;
+                    position: absolute;
+                    left: -5px;
+                    top: -2px;
+                    width: 14px;
+                    height: 14px;
+                    color: white;
+                    font-size: 12px;
+                    font-weight: 400;
+                    text-align: center;
+                    line-height: 14px;
+                    
+                    display: flex;
+                    justify-content: center;
+    
+                }
+            }
+            
+        }
+    }
+
+    &.nav {
+        height: 50px;
+
+        .container{
+            div:hover, div:active{
+                border-bottom: solid 3px;
+                border-color: #E33123;
+                padding: 13px 0px;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    &.banner {
+        background-color: #FFBFA3;
+        height: 24px;
+        box-shadow: 0px 2px 3px #00000014;
+        text-align: center;
+        color: white;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 3px;
+        align-content: center;
+
+        .container {
+            justify-content: center;
+        }
+
+        .sale{
+            display: flex;
+            width: 563px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+    }
+}
+
+.info {
+    
+
+    .rightInfo {
+        gap: 23px;
+    }
+}
+
+
+
+
+
+
+
+

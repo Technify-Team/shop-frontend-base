@@ -1,0 +1,129 @@
+[{
+  "id": 1,
+  "name": "Iphone 12 Pro",
+  "categoryId": 1,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 1200,
+  "rating": 4,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 22,
+  "name": "Iphone 11",
+  "categoryId": 1,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 800,
+  "rating": 3,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 3,
+  "name": "Iphone 12 Pro Max",
+  "categoryId": 1,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 1500,
+  "rating": 5,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 4,
+  "name": "Iphone 10",
+  "categoryId": 1,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 650,
+  "rating": 2,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 5,
+  "name": "Iphone 12 Pro",
+  "categoryId": 1,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 1200,
+  "rating": 4,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 6,
+  "name": "Iphone 11",
+  "categoryId": 1,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 800,
+  "rating": 3,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 7,
+  "name": "Iphone 12 Pro Max",
+  "categoryId": 1,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 1500,
+  "rating": 5,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 8,
+  "name": "Iphone 10",
+  "categoryId": 1,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 650,
+  "rating": 2,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 9,
+  "name": "Iphone 12 Pro",
+  "categoryId": 2,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 1200,
+  "rating": 4,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 10,
+  "name": "Iphone 11",
+  "categoryId": 2,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 800,
+  "rating": 3,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 11,
+  "name": "Iphone 12 Pro Max",
+  "categoryId": 2,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 1500,
+  "rating": 5,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 12,
+  "name": "Iphone 10",
+  "categoryId": 2,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 650,
+  "rating": 2,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 13,
+  "name": "Iphone 12 Pro",
+  "categoryId": 2,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 1200,
+  "rating": 4,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 14,
+  "name": "Iphone 11",
+  "categoryId": 2,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 800,
+  "rating": 3,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 15,
+  "name": "Iphone 12 Pro Max",
+  "categoryId": 2,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 1500,
+  "rating": 5,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}, {
+  "id": 16,
+  "name": "Iphone 10",
+  "categoryId": 2,
+  "photo": "https://www.orange.pl/medias/sys_master/root/images/h58/h2b/10137191153694/iphone-12-pro-pacific-blue.png",
+  "price": 650,
+  "rating": 2,
+  "description": "Triple 12MP cameras with Portrait mode, next-generation Smart HDR, and 4K video. 12MP TrueDepth front camera with Portrait mode."
+}]

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="info">
+        <img [src]="product.photo">
+        <div class="desc">
+            <p class="name"><b>{{product.name}}</b></p>
+            <div class="price">
+                <p class="num"> {{product.price}} </p>
+                <p class="measure">грн/кг</p>
+            </div>
+        </div>
+    </div>
+    <div class="settings">
+        <div class="quantity">
+            <button 
+                class="decrease" 
+                (click)="decreaseQuantity()"
+            >-</button>
+            <p>{{quantity}}</p>
+            <button 
+                class="increase" 
+                (click)="increaseQuantity()"
+            >+</button>
+        </div>
+        <button class="add" (click)="addToOrder()">Add to basket</button>
+        
+
+
+    </div>
+
+</div>

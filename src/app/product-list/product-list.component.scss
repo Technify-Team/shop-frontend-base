@@ -1,0 +1,46 @@
+$product-gap: 50px;
+
+:host {
+    display: block;
+    // padding-left: 1rem;
+    height: fit-content;
+}
+
+
+.products{ 
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: $product-gap;
+    position: relative;
+
+    app-product {
+        width: 280px;
+        min-height: 361px;
+    }
+
+}
+
+.sort {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: solid 1px #ECECEC;
+    align-items: center;
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+
+    }
+
+}
+
+.footer {
+    height: 50px;
+    width: 50px;
+    background-color: green;
+}
