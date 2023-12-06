@@ -36,9 +36,6 @@
         display: flex;
         gap: 23px;
 
-        .secret{
-            color:#e3302300;
-        }
         
         .item {
             display: flex;
@@ -73,7 +70,13 @@
         }
 
         .group {
-            gap: 32px;
+            gap: 10px;
+            align-items: center;
+
+            img{
+                width: 30px;
+                height: 30px;
+            }
 
             .order {
                 position: relative;
@@ -101,43 +104,6 @@
         }
     }
 
-    &.nav {
-        height: 50px;
-
-        .container{
-            div:hover, div:active{
-                border-bottom: solid 3px;
-                border-color: #E33123;
-                padding: 13px 0px;
-                cursor: pointer;
-            }
-        }
-
-    }
-
-    &.banner {
-        background-color: #FFBFA3;
-        height: 24px;
-        box-shadow: 0px 2px 3px #00000014;
-        text-align: center;
-        color: white;
-        font-size: 12px;
-        font-weight: 700;
-        padding: 3px;
-        align-content: center;
-
-        .container {
-            justify-content: center;
-        }
-
-        .sale{
-            display: flex;
-            width: 563px;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-    }
 }
 
 .info {
