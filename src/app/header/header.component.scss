@@ -1,118 +1,78 @@
 :host {
     display: block;
     width: 100%;
-    // justify-content: center;
-
 }
 
 
-.container {
-    width: 1270px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    .img-small {
-        width: 16px;
-        height: 16px;
-    }
-    
-    .img-medium {
-        width: 32px;
-    }
-}
-
-
-.section {
+.main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border-bottom: solid 1px #DEE2E6;
-    
+    border-bottom: solid 1px #DEE2E6;  
     width: 100%;
+    padding-top: 100px;
+    padding-bottom: 50px;
+
     
-    .group {
+    .container {
+        width: 1270px;
         display: flex;
-        gap: 23px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
 
-        
-        .item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-    
-            p {
-                text-transform: uppercase;
-                font-size: 8px;
-                line-height: 8px;
-                margin: 0px;
-            }
-    
-        }
     }
 
-    &.info { 
-        height: 45px;
+    #logo {
+        width: 168px;
     }
 
-    &.main {
-        height: 80px;
+    .rightInfo{
+        gap: 10px;
+    }
 
-        .logo {
-            img {
-                width: 34px;
-                height: 40px;
+    .leftInfo{
+        gap: 58px;
+    }
+
+    .group {
+
+        align-items: center;
+        display: flex;
+
+
+        img{
+            width: 30px;
+            height: 30px;
             }
-        }
 
-        .group {
-            gap: 10px;
-            align-items: center;
-
-            img{
-                width: 30px;
-                height: 30px;
-            }
-
-            .order {
-                position: relative;
+        .order {
+            position: relative;
                 
-                .circle {
-                    background-color: #E33123;
-                    border-radius: 50px;
-                    position: absolute;
-                    left: -5px;
-                    top: -2px;
-                    width: 14px;
-                    height: 14px;
-                    color: white;
-                    font-size: 12px;
-                    font-weight: 400;
-                    text-align: center;
-                    line-height: 14px;
-                    
-                    display: flex;
-                    justify-content: center;
-    
-                }
+            .circle {
+                background-color: #E33123;
+                border-radius: 50px;
+                position: absolute;
+                left: -5px;
+                top: -2px;
+                width: 14px;
+                height: 14px;
+                color: white;
+                font-size: 12px;
+                font-weight: 400;
+                text-align: center;
+                line-height: 14px;  
+                display: flex;
+                justify-content: center;
             }
-            
         }
-    }
-
-}
-
-.info {
-    
-
-    .rightInfo {
-        gap: 23px;
+            
     }
 }
+
+
+
+
 
 
 
