@@ -91,8 +91,8 @@ export class ProductListComponent implements OnInit {
     
   }
 
-  handlePageEvent(pageEvent: PageEvent) {
-    this.currentPage = pageEvent.pageIndex;
+  handlePageEvent(event: any) {
+    this.currentPage = event.page;
     this.processData();
   }
 

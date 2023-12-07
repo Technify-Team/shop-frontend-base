@@ -24,6 +24,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { CheckboxModule } from 'primeng/checkbox';
 import { FormsModule } from '@angular/forms';
 import { SliderModule } from 'primeng/slider';
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { SliderModule } from 'primeng/slider';
     ProgressSpinnerModule,
     CheckboxModule,
     FormsModule,
-    SliderModule
+    SliderModule,
+    PaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
