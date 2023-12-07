@@ -101,7 +101,6 @@ export class ProductListComponent implements OnInit {
     this.sortField = this.selectedItem?.code.fieldName;
     this.sortDirection = this.selectedItem?.code.order;
     this.sortListings();
-    console.log('jejjj');
   }
   
   sortListings(){

@@ -21,6 +21,7 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { DropdownModule } from 'primeng/dropdown';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     BreadCrumbsComponent,
     FilterComponent,
     MenuComponent,
+    ProductPageComponent,
   ],
   imports: [
     BrowserModule,
