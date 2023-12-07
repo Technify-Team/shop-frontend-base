@@ -27,7 +27,10 @@ export class ProductComponent {
   }
 
   decreaseQuantity():void {
-    this.quantity--;
+    if (this.quantity !== 1){
+      this.quantity--;
+    }
+    
   }
 
   addToOrder() {
