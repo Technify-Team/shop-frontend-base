@@ -4,7 +4,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { SelectedProduct } from './order/selected-product';
 
 class Order {
-  products = new Map<number, number>();
+  products: Map<number, number> = new Map<number, number>();
 }
 
 @Injectable({
@@ -18,7 +18,9 @@ export class OrderService {
   $order: Observable<Order> = this.orderSubj.asObservable();
 
   constructor() {
-    this.order = this.getData(this.key) ? JSON.parse(this.getData(this.key)) : new Order();
+    this.order = this.getData(this.key) 
+      ? JSON.parse(this.getData(this.key), this.reviver)
+      : new Order();
     this.orderSubj.next(this.order);
   }
 
@@ -36,7 +38,7 @@ export class OrderService {
   }
 
   private saveData(order: Order) {
-    localStorage.setItem(this.key, JSON.stringify(order));
+    localStorage.setItem(this.key, JSON.stringify(order, this.replacer));
   }
 
   private getData(key: string): string {
@@ -47,5 +49,26 @@ export class OrderService {
     this.order = new Order();
     localStorage.clear();
     this.orderSubj.next(this.order);
+  }
+
+  private replacer(key: any, value: any) {
+    if(value instanceof Map) {
+      return {
+        dataType: 'Map',
+        value: Array.from(value.entries()), // or with spread: value: [...value]
+      };
+    } else {
+      return value;
+    }
+  }
+
+  private reviver(key: any, value: any) {
+    console.log(key, value);
+    if(typeof value === 'object' && value !== null) {
+      if (value.dataType === 'Map') {
+        return new Map(value.value);
+      }
+    }
+    return value;
   }
 }
