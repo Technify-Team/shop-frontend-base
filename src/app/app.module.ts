@@ -21,6 +21,9 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { DropdownModule } from 'primeng/dropdown';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { CheckboxModule } from 'primeng/checkbox';
+import { FormsModule } from '@angular/forms';
+import { SliderModule } from 'primeng/slider';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     PanelMenuModule,
     MegaMenuModule,
     DropdownModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    CheckboxModule,
+    FormsModule,
+    SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
