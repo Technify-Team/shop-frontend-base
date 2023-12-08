@@ -18,9 +18,11 @@ export class ProductPageComponent {
 
   ngOnInit() {
     this.route.params.subscribe(params=>{
+      console.log(params['id'])
       let id = params['id'];
-      this.productsService.getProductById(id).subscribe(res => {
-        this.product = res
+      const subrsription = this.productsService.getProductById(id).subscribe(res => {
+        this.product = res;
+        subrsription.unsubscribe();
       })
     });
 
@@ -29,7 +31,7 @@ export class ProductPageComponent {
         take: 4,
         orderBy: {
           fieldName: "price",
-          order: Order.desc
+          order: Order.asc
         }
       }).subscribe(res => {
         this.products = res.items;

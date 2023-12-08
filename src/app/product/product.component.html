@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="info">
+    <div class="info" [routerLink]="['/catalog', product.id]">
         <img [src]="product.photo">
         <div class="desc">
             <p class="name"><b>{{product.name}}</b></p>

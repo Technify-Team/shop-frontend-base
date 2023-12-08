@@ -36,6 +36,10 @@ export class ProductComponent {
     this.orderService.addToOrder(selectedProduct);
   }
 
+  goToProductPage(){
+    
+  }
+
 
 
 }
