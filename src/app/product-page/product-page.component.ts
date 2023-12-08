@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../product-list/products';
 import { ProductsService } from '../product-list/products.service';
+import { Order } from 'src/core/interfaces/search-request.interface';
 
 @Component({
   selector: 'app-product-page',
@@ -11,15 +12,29 @@ import { ProductsService } from '../product-list/products.service';
 export class ProductPageComponent {
   rating: number = 5;
   product: Product; 
+  products: Product [];
 
-  constructor(private route: ActivatedRoute, private productsServise: ProductsService) { }
+  constructor(private route: ActivatedRoute, private productsService: ProductsService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params=>{
       let id = params['id'];
-      this.productsServise.getProductById(id).subscribe(res => {
+      this.productsService.getProductById(id).subscribe(res => {
         this.product = res
       })
     });
+
+      this.productsService.getProducts({
+        skip: 0,
+        take: 4,
+        orderBy: {
+          fieldName: "price",
+          order: Order.desc
+        }
+      }).subscribe(res => {
+        this.products = res.items;
+      });
   }
+
+  
 }
