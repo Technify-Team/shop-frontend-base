@@ -1,1 +1,42 @@
-<p>product-page works!</p>
+<div class="container">
+    <div class="info">
+        <div class="gallery">
+            <img [src]="product.photo">
+        </div>
+        <div class="desc">
+            <div class="header">
+                <p class="name"> {{product.name}} <sub>kg</sub></p>
+                <div class="reviews">
+                    <p-rating [(ngModel)]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
+                    <p>0 reviews</p>
+                </div>
+
+            </div>
+            <p class="code">Арт. 0000</p>
+            <p class="price">{{product.price}}</p>
+
+            <div class="card flex justify-content-center">
+                <p-accordion [multiple]="true" [activeIndex]="[0]">
+                    <p-accordionTab header="Delivery">
+                        <div class="del">
+                            <p>Pickup from the store</p>
+                            <p>Free</p>
+                            <p>Home delivery</p>
+                            <p>100 $</p>
+                            <p>New post</p>
+                            <p>According to tariffs</p>
+                        </div>
+                    </p-accordionTab>
+                    <p-accordionTab header="Payment">
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                            ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+                        </p>
+                    </p-accordionTab>
+                </p-accordion>
+            </div>
+
+        </div>
+    </div>
+    
+</div>

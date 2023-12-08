@@ -22,6 +22,8 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { DropdownModule } from 'primeng/dropdown';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { RatingModule } from 'primeng/rating';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { ProductPageComponent } from './product-page/product-page.component';
     PanelMenuModule,
     MegaMenuModule,
     DropdownModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    RatingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
