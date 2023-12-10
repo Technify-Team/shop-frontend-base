@@ -2,13 +2,11 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    height: 42px;
 
 }
 
 .section{
     width: 100%;
-    background-color: #F8F8F8;
     display: flex;
     justify-content: center;
     
@@ -16,8 +14,8 @@
 }
 
 .container{
-    width: 1140px;
-    padding: 11px 0px;
+    width: 1270px;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
 }
@@ -33,23 +31,27 @@ ul.breadcrumb {
 
     li{
         display: inline;
-        font-size: 12px;
+        color: #999;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 14px;
+        font-style: normal;
         font-weight: 400;
+        line-height: normal;
 
         a {
-            color: #E33123;
+            color: #000;
             text-decoration: none;
           }
 
         a:hover {
-            color: #E33123;
+            color: #000;
             text-decoration: underline;
           }
     }
 
     li+li:before {
         padding: 8px;
-        color: #E33123;
+        color: #000;
         content: "/\00a0";
     }
 

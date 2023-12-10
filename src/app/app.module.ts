@@ -21,9 +21,12 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { DropdownModule } from 'primeng/dropdown';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { CheckboxModule } from 'primeng/checkbox';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
+import { SliderModule } from 'primeng/slider';
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,12 @@ import { FormsModule } from '@angular/forms';
     DropdownModule,
     ProgressSpinnerModule,
     RatingModule,
+    CheckboxModule,
     FormsModule,
+    CheckboxModule,
+    FormsModule,
+    SliderModule,
+    PaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

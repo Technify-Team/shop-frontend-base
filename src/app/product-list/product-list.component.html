@@ -17,7 +17,10 @@
     </ng-template>
     
 </div>
-<div class="footer"></div>
+
+<div class="card flex justify-content-center">
+    <p-paginator (onPageChange)="handlePageEvent($event)" [first]="currentPage" [rows]="pageSize" [totalRecords]="itemsCount"></p-paginator>
+</div>
 
 <!-- <app-pagination 
     [currentPage]="currentPage"
