@@ -1,40 +1,22 @@
-
-    <div class="main section">
-        <div class="container">
-            <div class="logo">
-                <img src="/assets/icons/LogoBlusherV2-min 1.svg">
-            </div>
-            <div class="group">
-                <app-search></app-search>
-            </div>
-            <div class="rightInfo group">
-                <img src="/assets/icons/tabler-icon-user.svg">
-                <div class="order" >
-                    <div class="circle" *ngIf="orderSize">
-                        <div class="size">
-                            {{orderSize}}
-                        </div>
-                    </div>
-                    <img src="/assets/icons/tabler-icon-shopping-cart.svg">
-                </div>
-            </div>
+<div class="main">
+    <div class="container">
+        <div class="leftInfo group">
+            <img id="logo" src="/assets/icons/logo.svg">
+            <app-menu></app-menu>
         </div>
         
+        <div class="rightInfo group">
+            <app-search></app-search>
+            <img src="/assets/icons/tabler-icon-user.svg">
+            <img src="/assets/icons/mdi_heart-outline.svg">
+            <div class="order" >
+                <div class="circle" *ngIf="orderSize">
+                    <div class="size">
+                        {{orderSize}}
+                    </div>
+                </div>
+                <img src="/assets/icons/tabler-icon-shopping-cart.svg">
+            </div>
+        </div>
     </div>
-    <div class="nav section">
-
-        <app-menu></app-menu>
-        <!-- <div class="container">
-            <div>Назва</div>
-            <div>Назва</div>
-            <div>Назва</div>
-            <div>Назва</div>
-            <div>Назва</div>
-            <div>Назва</div>
-            <div>Назва</div>
-            <div>Назва</div>
-            <div>Назва</div>
-            <div>Назва</div>
-            <div>Назва</div>
-        </div> -->
-    </div>
+</div>

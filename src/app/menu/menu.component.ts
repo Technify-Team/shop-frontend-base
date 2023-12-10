@@ -10,206 +10,94 @@ export class MenuComponent implements OnInit{
   items: any;
 
     ngOnInit() {
-        this.items = [
-            {
-                label: 'Парфумерія',
-                icon: 'pi pi-fw pi-video',
-                items: [
-                    [
+      this.items = [
+        {
+            label: 'Our products',
+            icon: 'pi pi-fw pi-file',
+            items: [
+                {
+                    label: 'Фрукти, овочі',
+                    icon: 'pi pi-fw pi-plus',
+                    items: [
                         {
-                            label: 'Атомайзери'
+                            label: 'Фрукти',
+                            icon: 'pi pi-fw pi-bookmark'
                         },
                         {
-                            label: 'Аромати для дому',
-                        },
-                        {
-                          label: 'Аромалампа',
-                        },
-                        {
-                          label: 'Ароматизатори',
-                        },
-                        {
-                          label: 'Ароматичні палички',
-                        },
-                        {
-                          label: 'Ароматичні свічки',
-                        },
-                        {
-                          label: 'Парфумовані свічки',
+                            label: 'Овочі',
+                            icon: 'pi pi-fw pi-video'
                         }
-                    ],
-                    [
+                    ]
+                },
+                {
+                  label: 'Мʼясо, риба',
+                  icon: 'pi pi-fw pi-plus',
+                  items: [
                       {
-                          label: 'Атомайзери'
+                          label: 'Мʼясні консерви',
+                          icon: 'pi pi-fw pi-bookmark'
                       },
                       {
-                          label: 'Аромати для дому',
+                          label: 'Рибні консерви',
+                          icon: 'pi pi-fw pi-video'
                       },
                       {
-                        label: 'Аромалампа',
+                        label: 'Молочні продукти',
+                        icon: 'pi pi-fw pi-video'
+                      },
+                  ]
+                },
+                {
+                  label: 'Бакалія',
+                  icon: 'pi pi-fw pi-plus',
+                  items: [
+                      {
+                          label: 'Борошно',
+                          icon: 'pi pi-fw pi-bookmark'
                       },
                       {
-                        label: 'Ароматизатори',
-                      },
-                      {
-                        label: 'Ароматичні палички',
-                      },
-                      {
-                        label: 'Ароматичні свічки',
-                      },
-                      {
-                        label: 'Парфумовані свічки',
+                          label: 'Крупи',
+                          icon: 'pi pi-fw pi-video'
                       }
-                  ],
-                  [
-                    {
-                        label: 'Атомайзери'
-                    },
-                    {
-                        label: 'Аромати для дому',
-                    },
-                    {
-                      label: 'Аромалампа',
-                    },
-                    {
-                      label: 'Ароматизатори',
-                    },
-                    {
-                      label: 'Ароматичні палички',
-                    },
-                    {
-                      label: 'Ароматичні свічки',
-                    },
-                    {
-                      label: 'Парфумовані свічки',
-                    }
-                ],
-                [
-                  {
-                      label: 'Атомайзери'
-                  },
-                  {
-                      label: 'Аромати для дому',
-                  },
-                  {
-                    label: 'Аромалампа',
-                  },
-                  {
-                    label: 'Ароматизатори',
-                  },
-                  {
-                    label: 'Ароматичні палички',
-                  },
-                  {
-                    label: 'Ароматичні свічки',
-                  },
-                  {
-                    label: 'Парфумовані свічки',
-                  }
-              ],
-                ]
-            },
-            {
-              label: 'Макіяж',
-              icon: 'pi pi-fw pi-video',
-              items: [
-                [
-                    {
-                        label: 'Атомайзери'
-                    },
-                    {
-                        label: 'Аромати для дому',
-                    },
-                    {
-                      label: 'Аромалампа',
-                    },
-                    {
-                      label: 'Ароматизатори',
-                    },
-                    {
-                      label: 'Ароматичні палички',
-                    },
-                    {
-                      label: 'Ароматичні свічки',
-                    },
-                    {
-                      label: 'Парфумовані свічки',
-                    }
-                ],
-                [
-                  {
-                      label: 'Атомайзери'
-                  },
-                  {
-                      label: 'Аромати для дому',
-                  },
-                  {
-                    label: 'Аромалампа',
-                  },
-                  {
-                    label: 'Ароматизатори',
-                  },
-                  {
-                    label: 'Ароматичні палички',
-                  },
-                  {
-                    label: 'Ароматичні свічки',
-                  },
-                  {
-                    label: 'Парфумовані свічки',
-                  }
-              ],
-              [
-                {
-                    label: 'Атомайзери'
+                  ]
                 },
                 {
-                    label: 'Аромати для дому',
+                  label: 'Соуси, приправи',
+                  icon: 'pi pi-fw pi-plus',
+                  items: [
+                      {
+                          label: 'Кетчуп',
+                          icon: 'pi pi-fw pi-bookmark'
+                      },
+                      {
+                          label: 'Соус',
+                          icon: 'pi pi-fw pi-video'
+                      }
+                  ]
                 },
-                {
-                  label: 'Аромалампа',
-                },
-                {
-                  label: 'Ароматизатори',
-                },
-                {
-                  label: 'Ароматичні палички',
-                },
-                {
-                  label: 'Ароматичні свічки',
-                },
-                {
-                  label: 'Парфумовані свічки',
-                }
-            ],
-            [
-              {
-                  label: 'Атомайзери'
-              },
-              {
-                  label: 'Аромати для дому',
-              },
-              {
-                label: 'Аромалампа',
-              },
-              {
-                label: 'Ароматизатори',
-              },
-              {
-                label: 'Ароматичні палички',
-              },
-              {
-                label: 'Ароматичні свічки',
-              },
-              {
-                label: 'Парфумовані свічки',
-              }
-          ],
+
             ]
-            },
-          ]
-        
+        },
+        {
+            label: 'Our story',
+            icon: 'pi pi-fw pi-pencil',
+        },
+        {
+            label: 'Contacts',
+            icon: 'pi pi-fw pi-user',
+            
+        },
+        {
+            label: 'Sell ​​with us',
+            icon: 'pi pi-fw pi-calendar',
+        },
+      ];
+    }
 
-    };
 
-  }    
+    
+}
+
+
+
+ 
