@@ -22,6 +22,7 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { DropdownModule } from 'primeng/dropdown';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { CheckboxModule } from 'primeng/checkbox';
+import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 import { SliderModule } from 'primeng/slider';
 import { PaginatorModule } from 'primeng/paginator';
@@ -51,6 +52,9 @@ import { PaginatorModule } from 'primeng/paginator';
     MegaMenuModule,
     DropdownModule,
     ProgressSpinnerModule,
+    RatingModule,
+    CheckboxModule,
+    FormsModule,
     CheckboxModule,
     FormsModule,
     SliderModule,
