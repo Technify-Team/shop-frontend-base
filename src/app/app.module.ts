@@ -24,6 +24,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
+import { BasketPageComponent } from './basket-page/basket-page.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     FilterComponent,
     MenuComponent,
     ProductPageComponent,
+    BasketPageComponent,
   ],
   imports: [
     BrowserModule,
