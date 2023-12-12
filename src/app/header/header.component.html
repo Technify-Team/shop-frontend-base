@@ -9,7 +9,7 @@
             </div>
             <div class="rightInfo group">
                 <img src="/assets/icons/tabler-icon-user.svg">
-                <div class="order" >
+                <div class="order" [routerLink]="['/basket']">
                     <div class="circle" *ngIf="orderSize">
                         <div class="size">
                             {{orderSize}}
