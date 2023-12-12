@@ -1,0 +1,127 @@
+:host {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container{
+    width: 1270px;
+    // display: flex;
+    height: fit-content;
+
+    .header{
+        color: #122643;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 32px;
+        font-weight: 400;
+        margin-bottom: 50px;
+    }
+
+    .content{ 
+        display: flex;
+        gap: 50px;
+
+        .basket{
+            border: 1px solid #122643;
+            height: fit-content;
+            width: 500px;
+
+            .name{
+                border-bottom: 1px solid #122643;
+                text-align: center;
+                padding: 15px;
+                p{ 
+                    color: #122643;
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+            }
+            .products{
+                padding: 20px;
+                border-bottom: 1px solid #122643;
+                p{
+                    color: #122643;
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                }
+                img {
+                    height: 50px;
+                }
+            }
+            .promocode{
+                padding: 20px;
+                border-bottom: 1px solid #122643;
+                display: flex;
+                gap: 10px;
+
+                input{
+                    width: 310px;
+                    border: 1px solid #122643;
+                    padding: 5px 16px;
+
+                    ::placeholder{
+                        color: #122643;
+                        font-size: 20px;
+                        font-weight: 400;
+                    }
+                }
+                
+                button{
+                    width: 143px;
+                    display: inline;
+                    border: 1px solid #000;
+                    background-color: #122643;
+                    text-align: center;
+                    color: #FAFCFF;
+                    font-size: 20px;
+                    font-weight: 400;
+                    height: 34px;
+                }
+            }
+
+            .sum, .total{
+                padding: 20px;
+                border-bottom: 1px solid #122643;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                p{
+                    color: #122643;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+
+            }
+
+            .buttons{
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+
+                button{
+                    display: block;
+                    width: 232px;
+                    padding: 5px 0px;
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+
+                .checkout{
+                    color: #FAFCFF;
+                    background-color: #122643;
+                }
+
+                .back{
+                    border: 1px solid #122643;
+                    color: #122643;
+                    background-color: white;
+                }
+            }
+        }
+    }
+}

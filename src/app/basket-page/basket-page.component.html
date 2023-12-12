@@ -1,1 +1,52 @@
-<p>basket-page works!</p>
+<div class="container">
+    <p class="header">Твоя корзина</p>
+    <div class="content">
+        <div class="card">
+            <p-table [columns]="cols" [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th *ngFor="let col of columns">
+                            {{ col.header }}
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product>
+                    <tr>
+                        <td> <img [src]="product.photo" style="height:120px"> </td>
+                        <td>{{ product.price }}</td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.price }}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        <div class="basket">
+            <div class="name">Корзина</div>
+            <div class="products">
+                <p>4  товари</p>
+                <img src="/assets/images/iphone-12-pro-pacific-blue.webp">
+                <img src="/assets/images/iphone-12-pro-pacific-blue.webp">
+                <img src="/assets/images/iphone-12-pro-pacific-blue.webp">
+            </div>
+            <div class="promocode">
+                <input placeholder="Код на знижку"> 
+                <button>Застосувати</button>
+            </div>
+            <div class="sum">
+                <p>Підсумок (4 товари)</p>
+                <p>219,8 грн</p>
+                <p>Доставка</p>
+                <p>Розраховується на касі</p>
+            </div>
+            <div class="total">
+                <p>Знижка</p>
+                <p>-19,8 грн</p>
+                <p>200 грн</p>
+            </div>
+            <div class="buttons">
+                <button class="checkout">До оплати</button>
+                <button class="back">Продовжити покупки</button>
+            </div>
+        </div>
+    </div>
+</div>

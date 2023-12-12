@@ -25,6 +25,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 import { BasketPageComponent } from './basket-page/basket-page.component';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { BasketPageComponent } from './basket-page/basket-page.component';
     ProgressSpinnerModule,
     RatingModule,
     FormsModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,15 +17,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     // this.orderService.clearOrder();
     this.orderService.$order.subscribe(order => {
-      console.log(order);
       let amount = 0;
       order.products.forEach((item)=> amount += item);
       this.orderSize = amount;
-      // this.orderSize = order.reduce((sum, item) => sum + item.quantity, 0);
-      // order.forEach((item)=> console.log(item.quantity))
-      // this.orderSize = 0;
-      // this.orderService.$order.subscribe(order => {
-      //   order.forEach((item)=> this.orderSize += item.quantity)
+  
     })
     
   }
