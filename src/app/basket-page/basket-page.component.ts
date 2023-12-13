@@ -11,11 +11,12 @@ import { OrderInfo } from '../order/order';
 })
 export class BasketPageComponent {
   products: SelectedProduct[];
+  
 
   cols: any[];
 
   constructor(private productsService: ProductsService, private orderService: OrderService) {}
-  
+
   ngOnInit() {
 
       const currentOrder = this.orderService.getOrderInfo();
