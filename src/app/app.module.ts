@@ -26,6 +26,7 @@ import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 import { BasketPageComponent } from './basket-page/basket-page.component';
 import { TableModule } from 'primeng/table';
+import { QuantityComponent } from './quantity/quantity.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { TableModule } from 'primeng/table';
     MenuComponent,
     ProductPageComponent,
     BasketPageComponent,
+    QuantityComponent,
   ],
   imports: [
     BrowserModule,

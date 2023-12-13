@@ -10,21 +10,8 @@
         </div>
     </div>
     <div class="settings">
-        <div class="quantity">
-            <button 
-                class="decrease" 
-                (click)="decreaseQuantity()"
-            >-</button>
-            <p>{{quantity}}</p>
-            <button 
-                class="increase" 
-                (click)="increaseQuantity()"
-            >+</button>
-        </div>
-        <button class="add" (click)="addToOrder()">Add to basket</button>
-        
-
-
+        <app-quantity [(quantity)]="quantity"></app-quantity>
+        <button class="add" (click)="addToOrder()">До корзини</button>
     </div>
 
 </div>

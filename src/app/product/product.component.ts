@@ -18,17 +18,13 @@ export class ProductComponent {
 
   quantity: number = 1;
 
-
+test() {
+  this.quantity++;
+}
 
   constructor (private orderService: OrderService) {}
 
-  increaseQuantity():void {
-    this.quantity++;
-  }
 
-  decreaseQuantity():void {
-    this.quantity--;
-  }
 
   addToOrder() {
     const selectedProduct = new SelectedProduct(this.product.id, this.quantity);
@@ -36,9 +32,6 @@ export class ProductComponent {
     this.orderService.addToOrder(selectedProduct);
   }
 
-  goToProductPage(){
-    
-  }
 
 
 

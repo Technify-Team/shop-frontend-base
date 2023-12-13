@@ -26,6 +26,13 @@ export class BaseService {
         ) as Observable<T>;
     }
 
+    protected   <T>(url: string, ids: number[]): Observable<T> {
+        return this.getAll<T>(url).pipe(
+            mergeMap(x=> x),
+            filter(x=> ids.includes(x["id" as keyof T] as number)),
+        ) as Observable<T>;
+    }
+
     protected get<T>(url: string, searchRequest: SearchRequest): Observable<SearchResult<T>> {
         let totalCount = 0;
         return this.getAll<T>(url).pipe(
