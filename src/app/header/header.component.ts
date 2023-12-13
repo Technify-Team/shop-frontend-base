@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderService } from '../local.service';
+import { OrderService } from '../order/order.service';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
     // this.orderService.clearOrder();
     this.orderService.$order.subscribe(order => {
       let amount = 0;
-      order.products.forEach((item)=> amount += item);
+      order.products.forEach((item)=> amount += item.quantity);
       this.orderSize = amount;
   
     })

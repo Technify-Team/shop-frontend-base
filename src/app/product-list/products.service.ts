@@ -22,4 +22,8 @@ export class ProductsService extends BaseService {
   getProductById(id: number): Observable<Product> {
     return this.getById(this.url, id);
   }
+
+  getProductsByIds(ids: number[]): Observable<Product[]>{
+    return this.getByIds(this.url, ids);
+  }
 }

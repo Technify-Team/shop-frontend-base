@@ -9,7 +9,6 @@ import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ContainerComponent } from './container/container.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { OrderComponent } from './order/order.component';
 import { SearchComponent } from './search/search.component';
 import { BreadCrumbsComponent } from './bread-crumbs/bread-crumbs.component';
 import { FilterComponent } from './filter/filter.component';
@@ -38,7 +37,6 @@ import { QuantityComponent } from './quantity/quantity.component';
     ProductComponent,
     ProductListComponent,
     ContainerComponent,
-    OrderComponent,
     SearchComponent,
     BreadCrumbsComponent,
     FilterComponent,

@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Observable, delay, filter, first, map, merge, mergeMap, skip, take, toArray } from "rxjs";
-import { Order, SearchRequest } from "./interfaces/search-request.interface";
+import { OrderBy, SearchRequest } from "./interfaces/search-request.interface";
 import { SearchResult } from "./interfaces/search-result.interface";
 
 export class BaseService {
@@ -26,10 +26,11 @@ export class BaseService {
         ) as Observable<T>;
     }
 
-    protected   <T>(url: string, ids: number[]): Observable<T> {
+    protected getByIds  <T>(url: string, ids: number[]): Observable<T> {
         return this.getAll<T>(url).pipe(
             mergeMap(x=> x),
             filter(x=> ids.includes(x["id" as keyof T] as number)),
+            toArray()
         ) as Observable<T>;
     }
 
@@ -49,7 +50,7 @@ export class BaseService {
                     return 0;
                 })
 
-                if (searchRequest.orderBy.order == Order.desc) {
+                if (searchRequest.orderBy.order == OrderBy.desc) {
                     res.reverse();
                 }
                 

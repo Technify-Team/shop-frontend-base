@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Product } from '../product-list/products';
+import { Product, SelectedProduct } from '../product-list/products';
 import { ProductsService } from '../product-list/products.service';
-import { OrderService } from '../local.service';
-import { Order } from 'src/core/interfaces/search-request.interface';
+import { OrderService } from '../order/order.service';
+import { OrderInfo } from '../order/order';
 
 @Component({
   selector: 'app-basket-page',
@@ -10,26 +10,25 @@ import { Order } from 'src/core/interfaces/search-request.interface';
   styleUrls: ['./basket-page.component.scss']
 })
 export class BasketPageComponent {
-
-  products: Product[];
-  ids: Array<number>;
+  products: SelectedProduct[];
 
   cols: any[];
 
   constructor(private productsService: ProductsService, private orderService: OrderService) {}
-
+  
   ngOnInit() {
 
-      this.productsService.getProducts({
-        skip: 0,
-        take: 4,
-        orderBy: {
-          fieldName: "price",
-          order: Order.asc
-        }
-      }).subscribe(res => {
-        this.products = res.items;
+      const currentOrder = this.orderService.getOrderInfo();
+      const orderProducts = currentOrder.products;
+      const ids = currentOrder.products.map(x=> x.productId);
+      console.log(currentOrder);
+
+      this.productsService.getProductsByIds(ids).subscribe(res => {
+        this.products = res as SelectedProduct[];
+        this.products.map(product => product.quantity = orderProducts.find(x=> x.productId == product.id)?.quantity);
       });
+
+     
 
       this.cols = [
         { field: 'photo', header: 'Товар' },

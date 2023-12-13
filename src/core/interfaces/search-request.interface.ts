@@ -5,11 +5,11 @@ export interface SearchRequest {
     query?: Query,
     orderBy: {
         fieldName: string,
-        order: Order
+        order: OrderBy
     }
 }
 
-export enum Order {
+export enum OrderBy {
     asc = 'asc',
     desc = 'desc'
 }

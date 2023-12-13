@@ -2,14 +2,14 @@ import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Product } from './products';
 import { PageEvent } from '@angular/material/paginator';
 import { ProductsService } from './products.service';
-import { Order, SearchRequest } from 'src/core/interfaces/search-request.interface';
+import { OrderBy, SearchRequest } from 'src/core/interfaces/search-request.interface';
 import { SelectItemGroup } from 'primeng/api';
 
 interface Sorting {
   name: string;
   code: {
     fieldName: string;
-    order: Order;
+    order: OrderBy;
   }
 }
 
@@ -27,7 +27,7 @@ export class ProductListComponent implements OnInit {
   pageSize: number = 6;
   currentPage : number = 0;
   sortField = "id";
-  sortDirection = Order.desc;
+  sortDirection = OrderBy.desc;
 
   products: Product[] = [];
 
@@ -50,25 +50,25 @@ export class ProductListComponent implements OnInit {
         name: 'Сортувати за рейтингом', 
         code: {
           fieldName: "rating",
-          order: Order.desc
+          order: OrderBy.desc
         } 
       },
       { name: 'Спочатку найдешевші', 
         code: {
           fieldName: "price",
-          order: Order.asc
+          order: OrderBy.asc
         },
       },
       { name: 'Спочатку найдорожчі', 
         code:  {
           fieldName: "price",
-          order: Order.desc
+          order: OrderBy.desc
         }
       },
       { name: 'Популярні', 
         code: {
           fieldName: "price",
-          order: Order.asc
+          order: OrderBy.asc
         }
       },
     ]
@@ -111,7 +111,7 @@ export class ProductListComponent implements OnInit {
 
   sortFromHigh(){
     this.sortField = "price";
-    this.sortDirection = Order.desc;
+    this.sortDirection = OrderBy.desc;
     this.currentPage = 0;
     this.processData();
   }

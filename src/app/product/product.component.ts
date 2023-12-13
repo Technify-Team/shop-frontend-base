@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../product-list/products';
-import { OrderService } from '../local.service';
-import { SelectedProduct } from '../order/selected-product';
+import { OrderService } from '../order/order.service';
 
 @Component({
   selector: 'app-product',
@@ -12,9 +11,6 @@ export class ProductComponent {
 
   @Input()
   product: Product;
-
-  @Output()
-  selectedProduct = new EventEmitter<SelectedProduct>();
 
   quantity: number = 1;
 
@@ -27,12 +23,6 @@ test() {
 
 
   addToOrder() {
-    const selectedProduct = new SelectedProduct(this.product.id, this.quantity);
-    // this.orderService.clearOrder();
-    this.orderService.addToOrder(selectedProduct);
+    this.orderService.addToOrder(this.product.id, this.quantity);
   }
-
-
-
-
 }

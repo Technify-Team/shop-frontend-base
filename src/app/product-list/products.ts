@@ -7,3 +7,7 @@ export interface Product {
     rating: number
     description: string
 }
+
+export interface SelectedProduct extends Product {
+    quantity?: number;
+}

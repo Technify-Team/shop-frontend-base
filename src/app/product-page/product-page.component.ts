@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../product-list/products';
 import { ProductsService } from '../product-list/products.service';
-import { Order } from 'src/core/interfaces/search-request.interface';
+import { OrderBy } from 'src/core/interfaces/search-request.interface';
 
 @Component({
   selector: 'app-product-page',
@@ -30,7 +30,7 @@ export class ProductPageComponent {
         take: 4,
         orderBy: {
           fieldName: "price",
-          order: Order.asc
+          order: OrderBy.asc
         }
       }).subscribe(res => {
         this.products = res.items;
