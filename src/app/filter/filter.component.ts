@@ -9,38 +9,39 @@ import { Component } from '@angular/core';
 export class FilterComponent {
   items: any;
 
+  selectedCategories: any[] = [];
+
+    categories: any[] = [
+        { name: 'Accounting', key: 'A' },
+        { name: 'Marketing', key: 'M' },
+        { name: 'Production', key: 'P' },
+        { name: 'Research', key: 'R' }
+    ];
+
+    rangeValues: number[] = [20, 80];
+
     ngOnInit() {
         this.items = [
             {
-                label: 'File',
+                label: 'Fruits, vegetables, greenery',
                 icon: 'pi pi-fw pi-file',
                 items: [
                     {
-                        label: 'New',
+                        label: 'Fruits',
                         icon: 'pi pi-fw pi-plus',
-                        items: [
-                            {
-                                label: 'Bookmark',
-                                icon: 'pi pi-fw pi-bookmark'
-                            },
-                            {
-                                label: 'Video',
-                                icon: 'pi pi-fw pi-video'
-                            }
-                        ]
                     },
                     {
-                        label: 'Delete',
+                        label: 'Vegetables',
                         icon: 'pi pi-fw pi-trash'
                     },
                     {
-                        label: 'Export',
+                        label: 'Greenery',
                         icon: 'pi pi-fw pi-external-link'
                     }
                 ]
             },
             {
-                label: 'Edit',
+                label: 'Meat, fish',
                 icon: 'pi pi-fw pi-pencil',
                 items: [
                     {
@@ -62,7 +63,7 @@ export class FilterComponent {
                 ]
             },
             {
-                label: 'Users',
+                label: 'Dairy, eggs',
                 icon: 'pi pi-fw pi-user',
                 items: [
                     {
@@ -96,7 +97,7 @@ export class FilterComponent {
                 ]
             },
             {
-                label: 'Events',
+                label: 'Price',
                 icon: 'pi pi-fw pi-calendar',
                 items: [
                     {

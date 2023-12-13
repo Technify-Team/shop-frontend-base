@@ -1,1 +1,37 @@
-<p-panelMenu [model]="items" [style]="{'width':'282px'}"></p-panelMenu>
+<div class="card flex justify-content-center">
+    <p-accordion [multiple]="true" [activeIndex]="[0]" [style]="{'width':'280px'}">
+        <p-accordionTab header="Fruits, vegetables, greenery">
+            <div class="card flex justify-content-center">
+                <div class="flex flex-column gap-2">
+                    <div *ngFor="let category of categories" class="field-checkbox">
+                        <p-checkbox name="group" [value]="category" [(ngModel)]="selectedCategories" [inputId]="category.key"></p-checkbox>
+                        <label [for]="category.key">{{ category.name }}</label>
+                    </div>
+                </div>
+            </div>
+            
+        </p-accordionTab>
+        <p-accordionTab header="Meat, fish">
+            <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+            </p>
+        </p-accordionTab>
+        <p-accordionTab header="Dairy, eggs">
+            <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+            </p>
+        </p-accordionTab>
+        <p-accordionTab header="Price">
+            <div class="card flex justify-content-center">
+                <div>
+                    
+                    <p-slider [(ngModel)]="rangeValues" [range]="true" class="w-full"></p-slider>
+                    <input type="text" pInputText [(ngModel)]="rangeValues[0]" [style]="{'width':'50px'}" />
+                    <input type="text" pInputText [(ngModel)]="rangeValues[1]" [style]="{'width':'50px'}"/>
+                </div>
+            </div>
+        </p-accordionTab>
+    </p-accordion>
+</div>

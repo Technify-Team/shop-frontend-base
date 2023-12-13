@@ -21,9 +21,12 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { DropdownModule } from 'primeng/dropdown';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { CheckboxModule } from 'primeng/checkbox';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
+import { SliderModule } from 'primeng/slider';
+import { PaginatorModule } from 'primeng/paginator';
 import { BasketPageComponent } from './basket-page/basket-page.component';
 import { TableModule } from 'primeng/table';
 import { QuantityComponent } from './quantity/quantity.component';
@@ -57,7 +60,12 @@ import { QuantityComponent } from './quantity/quantity.component';
     DropdownModule,
     ProgressSpinnerModule,
     RatingModule,
+    CheckboxModule,
     FormsModule,
+    CheckboxModule,
+    FormsModule,
+    SliderModule,
+    PaginatorModule,
     TableModule
   ],
   providers: [],
