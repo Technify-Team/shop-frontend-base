@@ -14,7 +14,7 @@
                     <tr>
                         <td> <img [src]="product.photo" style="height:120px"> </td>
                         <td>{{ product.price }}</td>
-                        <td><app-quantity [(quantity)]="product.quantity"></app-quantity></td>
+                        <td><app-quantity [(quantity)]="product.quantity" (quantityChange)="productQuantityChanged(product.id, $event)"></app-quantity></td>
                         <td>{{ product.price * product.quantity }}</td>
                     </tr>
                 </ng-template>
@@ -23,7 +23,7 @@
         <div class="basket">
             <div class="name">Корзина</div>
             <div class="products">
-                <p>4  товари</p>
+                <p>{{ products.length }}  товари</p>
                 <img src="/assets/images/iphone-12-pro-pacific-blue.webp">
                 <img src="/assets/images/iphone-12-pro-pacific-blue.webp">
                 <img src="/assets/images/iphone-12-pro-pacific-blue.webp">
@@ -33,7 +33,7 @@
                 <button>Застосувати</button>
             </div>
             <div class="sum">
-                <p>Підсумок (4 товари)</p>
+                <p>Підсумок ({{ products.length }} товари)</p>
                 <p>219,8 грн</p>
                 <p>Доставка</p>
                 <p>Розраховується на касі</p>

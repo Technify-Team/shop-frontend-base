@@ -39,6 +39,10 @@ export class BasketPageComponent {
     ];
   }
 
+  productQuantityChanged(productId: number, quantity: number) {
+    this.orderService.updateOrder(productId, quantity);
+  }
+
 
   //     this.productsService.getProductsMini().then((data) => {
   //         this.products = data;

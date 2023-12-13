@@ -48,6 +48,13 @@ export class OrderService {
     this.orderSubj.next(this.getOrderInfo());
   }
 
+  public updateOrder(productId: number, quantity: number) {
+    this.order.products.set(productId, quantity);
+
+    this.saveData(this.order);
+    this.orderSubj.next(this.getOrderInfo());
+  }
+
   private saveData(order: Order) {
     localStorage.setItem(this.key, JSON.stringify(order, this.replacer));
   }
@@ -61,6 +68,7 @@ export class OrderService {
     localStorage.clear();
     this.orderSubj.next(this.getOrderInfo());
   }
+  
 
   private replacer(key: any, value: any) {
     if(value instanceof Map) {
