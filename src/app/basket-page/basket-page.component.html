@@ -29,7 +29,7 @@
         <div class="basket">
             <div class="name">Корзина</div>
             <div class="products">
-                <p>{{ products.length }}  товари</p>
+                <p>{{ orderSize }}  товари</p>
                 <img *ngFor="let product of products" [src]="product.photo">
             </div>
             <div class="promocode">
@@ -37,7 +37,7 @@
                 <button>Застосувати</button>
             </div>
             <div class="sum">
-                <p>Підсумок ({{ products.length }} товари)</p>
+                <p>Підсумок ({{ orderSize }} товари)</p>
                 <p>{{subtotal}} грн</p>
                 <p>Доставка</p>
                 <p>Розраховується на касі</p>
@@ -49,7 +49,7 @@
             </div>
             <div class="buttons">
                 <button class="checkout">До оплати</button>
-                <button class="back">Продовжити покупки</button>
+                <button class="back" [routerLink]="['/catalog']">Продовжити покупки</button>
             </div>
         </div>
     </div>

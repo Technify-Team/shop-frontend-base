@@ -15,6 +15,7 @@ export class BasketPageComponent {
   subtotal: number = 0;
   sale: number = 19.8;
   total: number;
+  orderSize: number = 0;
 
   
 
@@ -33,12 +34,14 @@ export class BasketPageComponent {
         this.products = res as SelectedProduct[];
         this.products.map(product => product.quantity = orderProducts.find(x=> x.productId == product.id)?.quantity);
         this.caclulateTotal();
+        this.calculateOrderSize()
       });
 
       this.orderService.$order.subscribe(order => {
         this.order = order;
         this.products = this.products.filter(product=> this.order.products.find(x=> x.productId == product.id));
         this.caclulateTotal();
+        this.calculateOrderSize()
       });
 
      
@@ -63,6 +66,12 @@ export class BasketPageComponent {
     this.subtotal = 0;
     this.products.forEach((item)=> this.subtotal += item.quantity?item.quantity*item.price : item.price);
     this.total = this.subtotal - this.sale;
+  }
+
+  calculateOrderSize(){
+    let amount = 0;
+    this.products.forEach((item)=>  item.quantity? amount += item.quantity : undefined);
+    this.orderSize = amount;
   }
 
 
