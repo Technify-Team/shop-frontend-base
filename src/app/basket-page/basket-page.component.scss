@@ -83,8 +83,8 @@
             .sum, .total{
                 padding: 20px;
                 border-bottom: 1px solid #122643;
-                display: flex;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-rows: 1fr 1fr;
                 justify-content: space-between;
 
                 p{

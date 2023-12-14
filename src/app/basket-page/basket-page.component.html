@@ -24,9 +24,7 @@
             <div class="name">Корзина</div>
             <div class="products">
                 <p>{{ products.length }}  товари</p>
-                <img src="/assets/images/iphone-12-pro-pacific-blue.webp">
-                <img src="/assets/images/iphone-12-pro-pacific-blue.webp">
-                <img src="/assets/images/iphone-12-pro-pacific-blue.webp">
+                <img *ngFor="let product of products" [src]="product.photo">
             </div>
             <div class="promocode">
                 <input placeholder="Код на знижку"> 
@@ -34,14 +32,14 @@
             </div>
             <div class="sum">
                 <p>Підсумок ({{ products.length }} товари)</p>
-                <p>219,8 грн</p>
+                <p>{{subtotal}} грн</p>
                 <p>Доставка</p>
                 <p>Розраховується на касі</p>
             </div>
             <div class="total">
                 <p>Знижка</p>
-                <p>-19,8 грн</p>
-                <p>200 грн</p>
+                <p>-{{sale}} грн</p>
+                <p>{{total}} грн</p>
             </div>
             <div class="buttons">
                 <button class="checkout">До оплати</button>

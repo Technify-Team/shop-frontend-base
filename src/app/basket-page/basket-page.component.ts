@@ -11,6 +11,10 @@ import { OrderInfo } from '../order/order';
 })
 export class BasketPageComponent {
   products: SelectedProduct[];
+  subtotal: number = 0;
+  sale: number = 19.8;
+  total: number;
+
   
 
   cols: any[];
@@ -27,6 +31,8 @@ export class BasketPageComponent {
       this.productsService.getProductsByIds(ids).subscribe(res => {
         this.products = res as SelectedProduct[];
         this.products.map(product => product.quantity = orderProducts.find(x=> x.productId == product.id)?.quantity);
+        this.products.forEach((item)=> this.subtotal += item.quantity?item.quantity*item.price : item.price);
+        this.total = this.subtotal - this.sale;
       });
 
      
