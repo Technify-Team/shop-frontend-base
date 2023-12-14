@@ -63,6 +63,13 @@ export class OrderService {
     return localStorage.getItem(key) || "";
   }
 
+  public deleteProductById(id: number){
+    this.order.products.delete(id);
+    
+    this.saveData(this.order);
+    this.orderSubj.next(this.getOrderInfo());
+  }
+
   public clearOrder() {
     this.order = new Order();
     localStorage.clear();

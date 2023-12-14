@@ -10,6 +10,7 @@ import { OrderInfo } from '../order/order';
   styleUrls: ['./basket-page.component.scss']
 })
 export class BasketPageComponent {
+  order: OrderInfo;
   products: SelectedProduct[];
   subtotal: number = 0;
   sale: number = 19.8;
@@ -23,16 +24,21 @@ export class BasketPageComponent {
 
   ngOnInit() {
 
-      const currentOrder = this.orderService.getOrderInfo();
-      const orderProducts = currentOrder.products;
-      const ids = currentOrder.products.map(x=> x.productId);
-      console.log(currentOrder);
+      this.order = this.orderService.getOrderInfo();
+      const orderProducts = this.order.products;
+      const ids = this.order.products.map(x=> x.productId);
+      console.log(this.order);
 
       this.productsService.getProductsByIds(ids).subscribe(res => {
         this.products = res as SelectedProduct[];
         this.products.map(product => product.quantity = orderProducts.find(x=> x.productId == product.id)?.quantity);
-        this.products.forEach((item)=> this.subtotal += item.quantity?item.quantity*item.price : item.price);
-        this.total = this.subtotal - this.sale;
+        this.caclulateTotal();
+      });
+
+      this.orderService.$order.subscribe(order => {
+        this.order = order;
+        this.products = this.products.filter(product=> this.order.products.find(x=> x.productId == product.id));
+        this.caclulateTotal();
       });
 
      
@@ -47,6 +53,16 @@ export class BasketPageComponent {
 
   productQuantityChanged(productId: number, quantity: number) {
     this.orderService.updateOrder(productId, quantity);
+  }
+
+  deleteProduct(productId: number) {
+    this.orderService.deleteProductById(productId);
+  }
+
+  caclulateTotal(){
+    this.subtotal = 0;
+    this.products.forEach((item)=> this.subtotal += item.quantity?item.quantity*item.price : item.price);
+    this.total = this.subtotal - this.sale;
   }
 
 

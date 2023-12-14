@@ -14,7 +14,13 @@
                     <tr>
                         <td> <img [src]="product.photo" style="height:120px"> </td>
                         <td>{{ product.price }}</td>
-                        <td><app-quantity [(quantity)]="product.quantity" (quantityChange)="productQuantityChanged(product.id, $event)"></app-quantity></td>
+                        <td>
+                            <app-quantity 
+                                [(quantity)]="product.quantity" 
+                                (quantityChange)="productQuantityChanged(product.id, $event)"
+                            ></app-quantity>
+                            <button class="delete" (click)="deleteProduct(product.id)" >видалити</button>
+                        </td>
                         <td>{{ product.price * product.quantity }}</td>
                     </tr>
                 </ng-template>

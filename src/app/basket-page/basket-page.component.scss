@@ -21,6 +21,16 @@
         display: flex;
         gap: 50px;
 
+        .delete{
+            color:  #EA4335;
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration-line: underline;
+            border: 0px;
+            background-color: transparent;
+            padding: 0px;
+        }
+
         .basket{
             border: 1px solid #122643;
             height: fit-content;
